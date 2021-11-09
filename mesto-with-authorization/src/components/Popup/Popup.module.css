@@ -1,0 +1,343 @@
+    .popup {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      align-items: center;
+      justify-content: center;
+       visibility: hidden;
+      opacity: 0;
+      transition: visibility 0.5s, opacity 0.5s linear; 
+      z-index: 1;
+    }
+.active{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.5s, opacity 0.5s linear; 
+  z-index: 1;
+}
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.8);
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+    }
+    .container {
+      max-width: 358px;
+      background-color: white;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      border-radius: 4%;
+      transform: translate(-50%, -50%);
+      padding-left: 36px;
+      padding-right: 36px;
+    }
+    
+    @media screen and (max-width: 550px) {
+      .container {
+        padding-left: 22px;
+        padding-right: 22px;
+        max-width: 238px;
+        /* height: 322px; */
+      }
+    }
+    
+
+.btnClose {
+  position: fixed;
+  top: -40px;
+  right: -40px;
+  background-image: url("../../images/Close\ Icon.png");
+  background-repeat: no-repeat;
+  background-size: 40px;
+  box-sizing: border-box;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  border: none;
+}
+
+.btnClose:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 550px) {
+  .btnClose {
+    width: 26px;
+    height: 26px;
+    top: -40px;
+    right: 0;
+    background-size: 22px;}}
+
+    .form__name{
+      font-family: Inter;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    padding: 34px 0 54px 0;
+    margin: 0;
+    height: 23px;
+    }
+    
+    
+    
+    @media screen and (max-width: 550px){
+      .form__name{
+      font-size: 18px;
+      line-height: 22px;
+    
+    }}
+
+    .form__info{
+      width: 358px;
+      height: 14px;
+      border: none;
+      font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+    outline: none;
+    padding-top: 0;
+    }
+    
+    .form__info:nth-of-type(2){
+      margin-top: 30px;
+    }
+    
+    
+    @media screen and (max-width: 550px){
+      .form__info{
+          width: 238px;
+        
+      }}
+
+
+      .form__btnSave{
+        background-color: black;
+        width: 358px;
+        height: 50px;
+        color: white;
+        margin-top: 48px;
+        
+        font-family: Inter;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    margin: 48px 0 37px;
+    }
+    
+    
+    .form__btnSave:hover{
+        opacity: 0.8;
+        cursor: pointer;
+    }
+    
+    @media screen and (max-width: 550px){
+        .form__btnSave{
+            font-size: 18px;
+            line-height: 22px;
+            width: 238px;
+            font-size: 14px;
+    line-height: 17px;
+        }}
+    
+        .form__btnSaveInactive { 
+          border: 1px solid #000000; 
+          opacity: 0.2; 
+          background-color: white; 
+          color: #000000; 
+      }
+
+
+
+
+
+    .popup__title {
+      font-family: Inter;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 15px;
+      margin-top: 10px;
+      color: #ffffff;
+    }
+    
+    .popup__save {
+      background-color: black;
+      width: 358px;
+      height: 50px;
+      color: white;
+      margin-top: 48px;
+      font-family: Inter;
+      font-size: 18px;
+      line-height: 22px;
+      text-align: center;
+      margin: 48px 0 37px;
+    }
+    
+    .popup__save:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+    
+    @media screen and (max-width: 550px) {
+      .popup__save {
+        font-size: 18px;
+        line-height: 22px;
+        width: 238px;
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+    
+    .popup__question {
+      padding-bottom: 0;
+    }
+    
+    
+    
+  
+    
+
+    
+    .popup__line {
+      width: 358px;
+      height: 0px;
+      margin-top: 12px;
+      opacity: 0.2;
+      border: 1px solid #000000;
+    }
+    
+    @media screen and (max-width: 550px) {
+      .popup__line {
+        width: 238px;
+      }
+    }
+    
+    .popup__info {
+      width: 358px;
+      height: 14px;
+      border: none;
+      font-family: Inter;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+      padding-bottom: 13px;
+      border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+      padding-top: 0;
+    }
+    
+    .popup__info:last-of-type {
+      margin-top: 30px;
+    }
+    
+    @media screen and (max-width: 550px) {
+      .popup__info {
+        width: 238px;
+      }
+    }
+    
+    
+  
+    
+    .popup__containerDelete {
+      padding-left: 33px;
+      height: 100px;
+      width: 155px;
+      border-radius: 50% 20% / 10% 60%;
+      position: fixed;
+      right: 44%;
+      top: 38%;
+      display: grid;
+      grid-template-columns: 80px 80px;
+      grid-template-rows: 50px 50px;
+      gap: 2px;
+      z-index: 2;
+      background-color: rgb(47, 58, 87);
+    }
+    
+    @media screen and (max-width: 1000px) {
+      .popup__containerDelete {
+        right: 0px;
+      }
+    }
+    
+  
+    
+    .popup__btnNoDelete {
+      background-size: 40px;
+      box-sizing: border-box;
+      background-color: floralwhite;
+      opacity: 0.6;
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 50% 20% / 10% 60%;
+      font-family: Inter;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 15px;
+      color: #0e0b0b;
+    }
+    
+    .popup__btnNoDelete:hover {
+      opacity: 0.6;
+      cursor: pointer;
+    }
+    
+    .popup__btnDelete {
+      background-size: 40px;
+      box-sizing: border-box;
+      background-color: floralwhite;
+      opacity: 0.6;
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 50% 20% / 10% 60%;
+      font-family: Inter;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 15px;
+      color: #0e0b0b;
+    }
+    
+    .popup__btnDelete:hover {
+      opacity: 0.6;
+      cursor: pointer;
+    }
+    
+
+   
+    
+    
+    
+    
+      .form__input_type_error { 
+        border-bottom: 1px solid #FF0000; 
+       
+      }  
+      .form__inputError_active{
+    
+        color: #FF0000; 
+      }

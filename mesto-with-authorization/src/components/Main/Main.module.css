@@ -1,0 +1,301 @@
+.profile {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  align-items: center;
+}
+
+@media screen and (max-width: 660px) {
+  .profile {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, auto);
+    gap: 22px;
+    justify-content: center;
+  }
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin-right: 30px;
+  position: relative;
+  grid-row: 1 / -1;
+  grid-column: 1 / 2;
+  z-index: 1;
+}
+
+@media screen and (max-width: 660px) {
+  .avatar {
+    margin: 0 auto;
+  }
+}
+
+.buttonAvatar {
+  cursor: pointer;
+  background-image: url("../../images/Vector\ \(4\).png");
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 3;
+  width: 120px;
+  height: 120px;
+  background-color: inherit;
+  border: none;
+  grid-row: 1 / -1;
+  grid-column: 1 / 2;
+  opacity: 0;
+}
+
+.buttonAvatar:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 1;
+}
+
+.info {
+  position: relative;
+  height: 73px;
+  width: 336px;
+}
+
+@media screen and (max-width: 350px) {
+  .info {
+    width: 282px;
+    margin: 0 auto;
+  }
+}
+
+.name {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 48px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  max-width: 294px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 350px) {
+  .name {
+    max-width: 245px;
+    position: relative;
+    font-size: 27px;
+    line-height: 33px;
+    text-align: center;
+  }
+}
+
+.editBtn {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 15px;
+  right: 0;
+  background-image: url("../../images/Vector\ \(2\).png");
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: center;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 350px) {
+  .editBtn {
+    right: 16px;
+    top: 6px;
+  }
+}
+
+.editBtn:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.status {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  margin-top: 16px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  max-width: 336px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 350px) {
+  .status {
+    position: relative;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    margin-top: 14px;
+  }
+}
+
+.addBtn {
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  max-width: 150px;
+  height: 50px;
+  width: 100%;
+  background-image: url("../../images/Vector\ \(1\).png");
+  background-repeat: no-repeat;
+  background-size: 22px;
+  background-position: center;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 660px) {
+  .addBtn {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .addBtn {
+    width: 282px;
+    margin: 0 auto;
+  }
+}
+
+.addBtn:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.elements {
+  display: grid;
+  gap: 20px 17px;
+  grid-template-columns: repeat(auto-fill, 282px);
+  margin-top: 51px;
+  justify-content: center;
+}
+
+.element {
+  background-color: white;
+  max-width: 282px;
+  width: 100%;
+  border-radius: 4%;
+  height: 361px;
+  position: relative;
+}
+
+.img {
+  max-width: 282px;
+  width: 100%;
+  height: 282px;
+  border-top-left-radius: 4%;
+  border-top-right-radius: 4%;
+}
+
+.img:hover {
+  cursor: pointer;
+}
+
+.element__name {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  margin-left: 21px;
+  color: #000000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 210px;
+}
+
+.like {
+  position: absolute;
+  bottom: 38px;
+  right: 28px;
+  background-image: url("../../images/Vector\ \(Stroke\).png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  background-size: 100%;
+  width: 22px;
+  height: 19px;
+  border: white;
+}
+
+.like:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.like_aktive {
+  position: absolute;
+  bottom: 38px;
+  right: 28px;
+  background-image: url("../../images/Union.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  background-size: 100%;
+  width: 22px;
+  height: 19px;
+  border: white;
+}
+
+.delete_hidden {
+  visibility: hidden;
+}
+
+.delete {
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  background-image: url("../../images/Group.png");
+  background-repeat: no-repeat;
+  background-size: 18px;
+  box-sizing: border-box;
+  background-color: transparent;
+  width: 18px;
+  height: 19.3px;
+  border: none;
+}
+
+.delete:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.couner {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  position: absolute;
+  width: 10px;
+  height: 13px;
+  right: 34px;
+  bottom: 22px;
+}
+.elements{
+  display: grid; 
+  gap: 20px 17px; 
+  grid-template-columns: repeat(auto-fill, 282px);
+  margin-top: 51px;
+  justify-content: center;
+}
