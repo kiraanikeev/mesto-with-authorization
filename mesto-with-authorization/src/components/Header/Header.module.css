@@ -1,7 +1,9 @@
 .header {
+  display: flex;
   margin-top: 45px;
-  padding-bottom: 37px;
+ padding-bottom: 0;
   max-width: 100%;
+  justify-content: space-between;
 }
 .header__logo {
   max-width: 142px;
@@ -9,7 +11,23 @@
 }
 
 .header__line {
-  margin-top: 41px;
+  margin-top: 30px;
   opacity: 0.7;
   border: 1px solid #545454;
+  margin-bottom: 37px;
+}
+.link_p{
+  text-align: right; 
+  margin-right: 0; 
+
+}
+.link{
+
+  text-decoration: none; 
+  font-family: Inter, Arial, Helvetica, sans-serif; 
+  font-style: normal; 
+  font-weight: normal; 
+  font-size: 18px; 
+  line-height: 22px; 
+  color: #ffffff; 
 }

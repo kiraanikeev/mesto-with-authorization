@@ -1,0 +1,68 @@
+.container{
+    max-width: 358px; 
+    margin: auto; 
+
+}
+
+.heading{
+    padding-top: 60px;
+    margin-bottom: 20px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #FFFFFF;
+
+
+}
+
+.link{
+    color: white; 
+    text-decoration: none; 
+    font-family: Inter, Arial, Helvetica, sans-serif; 
+    font-style: normal; 
+    font-weight: normal; 
+    font-size: 14px; 
+    line-height: 17px; 
+    margin-bottom: 80px; 
+    transition: opacity 1s linear;
+    
+}
+.link_p:hover{
+    cursor: pointer; 
+    opacity: 0.8; 
+  } 
+.link_p{
+    margin-top: 15px;
+    text-align: center;
+}
+
+.form__info { 
+margin-top: 30px;
+    background-color: black; 
+    color: white; 
+    min-height: 27px; 
+    width: 100%;
+    padding-bottom: 13px;
+    border: none; 
+    border-bottom: 2px solid #cccccc; 
+  } 
+
+  .form__btn{
+margin-top: 216px;
+width: 100%;
+height: 50px;
+font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 22px;
+text-align: center;
+  }
+
+  .form__btn:hover{
+    cursor: pointer; 
+    opacity: 0.9; 
+  } 

@@ -1,15 +1,20 @@
+import React from "react";
+import {Route, Switch} from "react-router-dom";
+import { useState } from "react";
+import { useEffect } from "react";
 import '../../fonts/inter.css'; 
 import styles from "./App.module.css";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
-import React from "react";
-import { useState } from "react";
 import Popup from "../Popup/Popup";
 import ImagePopup from "../ImagePopup/ImagePopup";
-import { useEffect } from "react";
 import { api } from "../Api/Api";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
+import Register from '../Register/Register';
+import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
+import Login from "../Login/Login";
+
 
 function App() {
 
@@ -145,16 +150,31 @@ visibleCard={visibleCard} cardPictureCloseVisible={cardPictureCloseVisible}
 selectedCard={selectedCard} cardPictureSet={cardPictureSet} />}
 
 <Header />
-<Main
- handleAvatarClick={handleAvatarClick}
- handleProfileClick={handleProfileClick}
- handleAddPlaceClick={handleAddPlaceClick}
- handleCardClick={handleCardClick}
- cardsArray={cardsArray}
- handleCardDelete={handleCardDelete}
- handleCardLike={handleCardLike}
+<Switch>
+<Route path='/signup'>
+<Register
+name="register"
 />
+</Route>
+<Route path='/signin'>
+  <Login/>
+</Route>
+<ProtectedRoute
+exact path="/"
+component={Main}
+handleAvatarClick={handleAvatarClick}
+handleProfileClick={handleProfileClick}
+handleAddPlaceClick={handleAddPlaceClick}
+handleCardClick={handleCardClick}
+cardsArray={cardsArray}
+handleCardDelete={handleCardDelete}
+handleCardLike={handleCardLike} />
+
+{/* <Main
+
+/> */}
 <Footer />
+</Switch>
 </CurrentUserContext.Provider>
     </div>
   );
