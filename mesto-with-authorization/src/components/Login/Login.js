@@ -8,7 +8,7 @@ function Login (props){
     
 function submitLogin(e){
     e.preventDefault(); 
-    props.heandelLogin({email, password})
+    props.handelLogin(email, password)
 }
 function changeEmail(e){
 let email = e.target.value
@@ -23,10 +23,10 @@ function changePassword(e){
     <section className={styles.container}>
     <form action="#" name={props.name} onSubmit={submitLogin} className={styles.registration} noValidate > 
     <h3 className={styles.heading}>Вход</h3>
-    <input className={styles.form__info} onChange={changeEmail} type="email" name='' placeholder="Email" required minLength={2} maxLength={40}/>
-    <span className={styles.form__input_type_error} id=""></span>
-    <input className={styles.form__info} onChange={changePassword}  type="password" name='' placeholder="Пароль" required minLength={2} maxLength={200}/>
-    <span className={styles.form__input_type_error} id=""></span>
+    <input className={styles.form__info} onChange={changeEmail} type="email" placeholder="Email" required minLength={2} maxLength={40}/>
+    <span className={styles.form__input_type_error}></span>
+    <input className={styles.form__info} onChange={changePassword}  type="password" placeholder="Пароль" required minLength={2} maxLength={200}/>
+    <span className={styles.form__input_type_error}></span>
     <button className={styles.form__btn} type='submit'>Войти</button>
     </form>
     </section>

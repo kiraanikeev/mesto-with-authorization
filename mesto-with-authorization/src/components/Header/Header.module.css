@@ -16,10 +16,17 @@
   border: 1px solid #545454;
   margin-bottom: 37px;
 }
-.link_p{
+.link_div{
+  display: inline-block;
   text-align: right; 
   margin-right: 0; 
-
+  color: #ffffff; 
+  padding-right: 40px;
+  font-family: Inter, Arial, Helvetica, sans-serif; 
+  font-style: normal; 
+  font-weight: normal; 
+  font-size: 18px; 
+  line-height: 22px; 
 }
 .link{
 
@@ -29,5 +36,5 @@
   font-weight: normal; 
   font-size: 18px; 
   line-height: 22px; 
-  color: #ffffff; 
+  color: #ffffff;
 }

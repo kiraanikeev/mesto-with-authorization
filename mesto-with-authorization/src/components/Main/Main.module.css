@@ -21,7 +21,6 @@
   position: relative;
   grid-row: 1 / -1;
   grid-column: 1 / 2;
-  z-index: 1;
 }
 
 @media screen and (max-width: 660px) {

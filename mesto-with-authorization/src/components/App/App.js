@@ -1,7 +1,6 @@
 import React from "react";
-import {Route, Switch} from "react-router-dom";
-import { useState } from "react";
-import { useEffect } from "react";
+import {Route, Switch, useHistory} from "react-router-dom";
+import { useState, useEffect } from "react";
 import '../../fonts/inter.css'; 
 import styles from "./App.module.css";
 import Header from "../Header/Header";
@@ -14,6 +13,7 @@ import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import Register from '../Register/Register';
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import Login from "../Login/Login";
+import { login, register, token } from "../Api/ApiAuth";
 
 
 function App() {
@@ -24,6 +24,63 @@ function App() {
   const [visibleCard, cardPictureCloseVisible] = useState(false);
   const [selectedCard, cardPictureSet] = useState(null);
   const [currentUser, setCurrentUser] = useState('')
+  const [loggedIn, setLoggedIn] = useState(false)
+  const [userEmail, setUserEmail] = useState('')
+  const history = useHistory()
+
+ 
+
+const handelRegistration = (email, password) => {
+register(password, email)
+.then((res)=>{
+  console.log(res)
+console.log('ВЫ УСПЕШНО ЗАРЕГИСТРИРОВАЛИСЬ')
+history.push('/signin')
+})
+.catch((err) => {
+  console.log(`Не удалось редактировать данные пользователя ${err}`); 
+}); 
+}
+const handleToken =()=>{
+  if (localStorage.getItem("token")) { 
+    console.log('handleToken work0000')
+    const jwt = localStorage.getItem("token"); 
+    token(jwt) 
+      .then((res) => { 
+        console.log('handleToken work')
+        setLoggedIn(true); 
+        setUserEmail(res.data.email); 
+        history.push("/"); 
+      }) 
+      .catch((err) => {
+        console.log(`Не удалось редактировать данные пользователя ${err}`); 
+      }); 
+      }
+}
+useEffect(() => { 
+  handleToken(); 
+}, []);
+ 
+const handelLogin =(email, password)=>{
+  login(password,email)
+.then((res)=>{
+  console.log('ВЫ ЗАЛОГИНИЛИСЬ')
+  setLoggedIn(true)
+setUserEmail(email)
+  history.push('/')
+  localStorage.setItem('token', res.token)
+})
+.catch((err) => {
+  console.log(`Не удалось редактировать данные пользователя ${err}`); 
+}); 
+}
+
+const outLogin = ()=>{
+localStorage.removeItem('token')
+setLoggedIn(false)
+history.push('/signin')
+console.log('outLogin')
+}
 
 
 
@@ -69,10 +126,6 @@ api.changeAvatar(avatar)
   console.log(`Не удалось редактировать данные пользователя ${err}`); 
 }); 
 } 
-
-
-
-
 
 
 const[cardsArray, setCardsArray]=useState([])
@@ -149,15 +202,20 @@ handelSetCards={handelSetCards}
 visibleCard={visibleCard} cardPictureCloseVisible={cardPictureCloseVisible}
 selectedCard={selectedCard} cardPictureSet={cardPictureSet} />}
 
-<Header />
+<Header 
+outLogin={outLogin}
+userEmail={userEmail}/>
 <Switch>
 <Route path='/signup'>
 <Register
 name="register"
+handelRegistration={handelRegistration}
 />
 </Route>
+
 <Route path='/signin'>
-  <Login/>
+<Login
+handelLogin={handelLogin}/>
 </Route>
 <ProtectedRoute
 exact path="/"
@@ -168,11 +226,9 @@ handleAddPlaceClick={handleAddPlaceClick}
 handleCardClick={handleCardClick}
 cardsArray={cardsArray}
 handleCardDelete={handleCardDelete}
-handleCardLike={handleCardLike} />
+handleCardLike={handleCardLike}
+loggedIn={loggedIn} />
 
-{/* <Main
-
-/> */}
 <Footer />
 </Switch>
 </CurrentUserContext.Provider>
