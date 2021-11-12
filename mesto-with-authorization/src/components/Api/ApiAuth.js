@@ -8,7 +8,6 @@ export const result =(res)=>{
 }
 
 export const register = (password, email)=>{
-  console.log('register', email, password)
     return fetch(`${Base_url}/signup`, {
         method: 'POST',
         headers: {
@@ -22,7 +21,6 @@ export const register = (password, email)=>{
 };
 
 export const login =(password, email)=>{
-  console.log('login', email, password)
 return fetch(`${Base_url}/signin`,{
   method:  "POST",
   headers:{"Content-Type": "application/json" },

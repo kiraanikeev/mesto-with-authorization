@@ -8,8 +8,6 @@ function Register (props){
     
 function submitRegistration(e){
     e.preventDefault(); 
-    console.log('registration component email', email)
-    console.log('registration component password', password)
     props.handelRegistration(email, password)
 }
 function changeEmail(e){

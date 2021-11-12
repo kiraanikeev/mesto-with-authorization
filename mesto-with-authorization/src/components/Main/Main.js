@@ -7,7 +7,6 @@ import React from "react";
 import {CurrentUserContext} from "../../contexts/CurrentUserContext"
 function Main(props) {
   const currentUser = useContext(CurrentUserContext)
-  console.log('Main')
   return (
     <div className={styles.main}>
       <section className={styles.profile}>

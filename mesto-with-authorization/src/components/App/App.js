@@ -14,7 +14,7 @@ import Register from '../Register/Register';
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import Login from "../Login/Login";
 import { login, register, token } from "../Api/ApiAuth";
-
+import InfoTooltip from '../InfoTooltip/InfoTooltip'
 
 function App() {
 
@@ -25,6 +25,8 @@ function App() {
   const [selectedCard, cardPictureSet] = useState(null);
   const [currentUser, setCurrentUser] = useState('')
   const [loggedIn, setLoggedIn] = useState(false)
+  const [tooltipExist, setTooltipExist] = useState(false)
+  const [whatTooltip, setWhatTooltip] = useState(false)
   const [userEmail, setUserEmail] = useState('')
   const history = useHistory()
 
@@ -33,21 +35,21 @@ function App() {
 const handelRegistration = (email, password) => {
 register(password, email)
 .then((res)=>{
-  console.log(res)
 console.log('ВЫ УСПЕШНО ЗАРЕГИСТРИРОВАЛИСЬ')
 history.push('/signin')
+setTooltipExist(true)
+setWhatTooltip(true)
 })
 .catch((err) => {
+  setTooltipExist(true)
   console.log(`Не удалось редактировать данные пользователя ${err}`); 
 }); 
 }
 const handleToken =()=>{
   if (localStorage.getItem("token")) { 
-    console.log('handleToken work0000')
     const jwt = localStorage.getItem("token"); 
     token(jwt) 
       .then((res) => { 
-        console.log('handleToken work')
         setLoggedIn(true); 
         setUserEmail(res.data.email); 
         history.push("/"); 
@@ -71,6 +73,7 @@ setUserEmail(email)
   localStorage.setItem('token', res.token)
 })
 .catch((err) => {
+  setTooltipExist(true)
   console.log(`Не удалось редактировать данные пользователя ${err}`); 
 }); 
 }
@@ -79,7 +82,6 @@ const outLogin = ()=>{
 localStorage.removeItem('token')
 setLoggedIn(false)
 history.push('/signin')
-console.log('outLogin')
 }
 
 
@@ -197,6 +199,12 @@ handleUpdateUser={handleUpdateUser} onUpdateAvatar={handleUpdateAvatar}
 handelSetCards={handelSetCards}
 > 
 </Popup>
+
+<InfoTooltip
+tooltipExist={tooltipExist} setTooltipExist={setTooltipExist}
+whatTooltip={whatTooltip} setWhatTooltip={setWhatTooltip}
+/>
+
 {selectedCard &&
 <ImagePopup
 visibleCard={visibleCard} cardPictureCloseVisible={cardPictureCloseVisible}
