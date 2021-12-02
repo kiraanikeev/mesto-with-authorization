@@ -1,5 +1,5 @@
-body { 
-  background-color: #000000; 
+body {
+  background-color: #000000;
 }
 
 .page {
@@ -8,7 +8,6 @@ body {
   padding-left: 200px;
   padding-right: 200px;
   margin: 0 auto;
-  
 }
 
 @media screen and (max-width: 1020px) {

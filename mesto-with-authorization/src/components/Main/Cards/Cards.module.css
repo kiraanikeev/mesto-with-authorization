@@ -1,116 +1,113 @@
-.elements{
-    display: grid; 
-    gap: 20px 17px; 
-    grid-template-columns: repeat(auto-fill, 282px);
-    margin-top: 51px;
-    justify-content: center;
+.elements {
+  display: grid;
+  gap: 20px 17px;
+  grid-template-columns: repeat(auto-fill, 282px);
+  margin-top: 51px;
+  justify-content: center;
 }
-.element{
-    background-color: white;
-    max-width: 282px;
-    width: 100%;
-    border-radius: 4%; 
-    height: 361px;
-    position: relative;
-
+.element {
+  background-color: white;
+  max-width: 282px;
+  width: 100%;
+  border-radius: 4%;
+  height: 361px;
+  position: relative;
 }
-.name{
-    font-family: Inter;
-font-style: normal;
-font-weight: 900;
-font-size: 24px;
-line-height: 29px;
-margin-left: 21px;
-color: #000000;
-text-overflow: ellipsis;
-white-space: nowrap;
-overflow: hidden;
-max-width: 210px;
-}
-
-.img{
-    max-width: 282px;
-    width: 100%;
-height: 282px;
-    border-top-left-radius: 4%; 
-    border-top-right-radius: 4%; 
+.name {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  margin-left: 21px;
+  color: #000000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 210px;
 }
 
-
-.img:hover{
-
-    cursor: pointer;
-}
-.delete{
-    position: absolute;
-    top: 18px;
-right: 15px;
-background-image: url('../../../images/Group.png'); 
-background-repeat: no-repeat; 
-background-size: 18px; 
-box-sizing: border-box;
-background-color: transparent; 
-width: 18px;
-height: 19.3px;
-border: none;
+.img {
+  max-width: 282px;
+  width: 100%;
+  height: 282px;
+  border-top-left-radius: 4%;
+  border-top-right-radius: 4%;
 }
 
-.delete:hover{
-    cursor: pointer;
+.img:hover {
+  cursor: pointer;
+}
+.delete {
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  background-image: url("../../../images/Group.png");
+  background-repeat: no-repeat;
+  background-size: 18px;
+  box-sizing: border-box;
+  background-color: transparent;
+  width: 18px;
+  height: 19.3px;
+  border: none;
 }
 
-.deleteHidden{
-    visibility: hidden;
+.delete:hover {
+  cursor: pointer;
 }
 
-.counter{
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 13px;
-    line-height: 16px;
-    text-align: center;
+.deleteHidden {
+  visibility: hidden;
+}
 
-    position: absolute;
-width: 10px;
-height: 13px;
-right: 34px;
-bottom: 22px;
-}
-.like{
-    position: absolute;
-    bottom: 38px;
-    right: 28px;
-   
-    background-image: url('../../../images/Vector\ \(Stroke\).png'); 
-    background-repeat: no-repeat; 
+.counter {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
 
-    background-position: center;
+  position: absolute;
+  width: 10px;
+  height: 13px;
+  right: 34px;
+  bottom: 22px;
+}
+.like {
+  position: absolute;
+  bottom: 38px;
+  right: 28px;
 
-    background-color: transparent; 
-    background-size: 100%;
-    width: 22px;
-    height: 19px;
-    border: white;
+  background-image: url("../../../images/Vector\ \(Stroke\).png");
+  background-repeat: no-repeat;
+
+  background-position: center;
+
+  background-color: transparent;
+  background-size: 100%;
+  width: 22px;
+  height: 19px;
+  border: white;
 }
-.like:hover{
-    opacity: 0.6;
-    cursor: pointer;
+.like:hover {
+  opacity: 0.6;
+  cursor: pointer;
 }
-.likeActive{
-    position: absolute;
-    bottom: 38px;
-    right: 28px;
-    background-image: url('../../../images/Union.png'); 
-    background-repeat: no-repeat; 
-    background-position: center;
-    background-color: transparent; 
-    background-size: 100%;
-    width: 22px;
-    height: 19px;
-    border: white;
+.likeActive {
+  position: absolute;
+  bottom: 38px;
+  right: 28px;
+  background-image: url("../../../images/Union.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  background-size: 100%;
+  width: 22px;
+  height: 19px;
+  border: white;
 }
-.likeActive:hover{
-    opacity: 0.6;
-    cursor: pointer;
+.likeActive:hover {
+  opacity: 0.6;
+  cursor: pointer;
 }

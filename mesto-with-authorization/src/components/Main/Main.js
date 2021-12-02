@@ -1,16 +1,19 @@
-
 import styles from "./Main.module.css";
-import {api} from "../Api/Api"
+import { api } from "../Api/Api";
 import { useState, useEffect, useContext } from "react";
 import Cards from "./Cards/Cards";
-import React from "react"; 
-import {CurrentUserContext} from "../../contexts/CurrentUserContext"
+import React from "react";
+import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 function Main(props) {
-  const currentUser = useContext(CurrentUserContext)
+  const currentUser = useContext(CurrentUserContext);
   return (
     <div className={styles.main}>
       <section className={styles.profile}>
-        <img src={currentUser.avatar} alt="фотография человека" className={styles.avatar} />
+        <img
+          src={currentUser.avatar}
+          alt="фотография человека"
+          className={styles.avatar}
+        />
         <button
           className={styles.buttonAvatar}
           onClick={props.handleAvatarClick}
@@ -31,12 +34,19 @@ function Main(props) {
         ></button>
       </section>
 
-
       <section className={styles.elements}>
-       {props.cardsArray.map((item)=>{
-      return( <Cards key={item._id} data={item} handleCardClick={props.handleCardClick} 
-        handleCardLike={props.handleCardLike} handleCardDelete={props.handleCardDelete} ></Cards>)})}
- </section>
+        {props.cardsArray.map((item) => {
+          return (
+            <Cards
+              key={item._id}
+              data={item}
+              handleCardClick={props.handleCardClick}
+              handleCardLike={props.handleCardLike}
+              handleCardDelete={props.handleCardDelete}
+            ></Cards>
+          );
+        })}
+      </section>
     </div>
   );
 }

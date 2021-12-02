@@ -1,7 +1,7 @@
 .header {
   display: flex;
   margin-top: 45px;
- padding-bottom: 0;
+  padding-bottom: 0;
   max-width: 100%;
   justify-content: space-between;
 }
@@ -16,25 +16,24 @@
   border: 1px solid #545454;
   margin-bottom: 37px;
 }
-.link_div{
+.link_div {
   display: inline-block;
-  text-align: right; 
-  margin-right: 0; 
-  color: #ffffff; 
+  text-align: right;
+  margin-right: 0;
+  color: #ffffff;
   padding-right: 40px;
-  font-family: Inter, Arial, Helvetica, sans-serif; 
-  font-style: normal; 
-  font-weight: normal; 
-  font-size: 18px; 
-  line-height: 22px; 
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
 }
-.link{
-
-  text-decoration: none; 
-  font-family: Inter, Arial, Helvetica, sans-serif; 
-  font-style: normal; 
-  font-weight: normal; 
-  font-size: 18px; 
-  line-height: 22px; 
+.link {
+  text-decoration: none;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
   color: #ffffff;
 }
