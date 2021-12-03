@@ -254,7 +254,7 @@ function App() {
             handleCardLike={handleCardLike}
             loggedIn={loggedIn}
           />
-
+          <Redirect to="/" />
           <Footer />
         </Switch>
       </CurrentUserContext.Provider>
