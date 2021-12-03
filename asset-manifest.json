@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/mesto-with-authorization/static/css/main.a6390005.chunk.css",
-    "main.js": "/mesto-with-authorization/static/js/main.5cd24bd1.chunk.js",
-    "main.js.map": "/mesto-with-authorization/static/js/main.5cd24bd1.chunk.js.map",
+    "main.js": "/mesto-with-authorization/static/js/main.7c242aac.chunk.js",
+    "main.js.map": "/mesto-with-authorization/static/js/main.7c242aac.chunk.js.map",
     "runtime-main.js": "/mesto-with-authorization/static/js/runtime-main.291aff1b.js",
     "runtime-main.js.map": "/mesto-with-authorization/static/js/runtime-main.291aff1b.js.map",
     "static/js/2.2b258366.chunk.js": "/mesto-with-authorization/static/js/2.2b258366.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.291aff1b.js",
     "static/js/2.2b258366.chunk.js",
     "static/css/main.a6390005.chunk.css",
-    "static/js/main.5cd24bd1.chunk.js"
+    "static/js/main.7c242aac.chunk.js"
   ]
 }
