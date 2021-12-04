@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.a1de875e.chunk.css",
-    "main.js": "/static/js/main.5cd24bd1.chunk.js",
-    "main.js.map": "/static/js/main.5cd24bd1.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.96ad9801.js",
-    "runtime-main.js.map": "/static/js/runtime-main.96ad9801.js.map",
-    "static/js/2.2b258366.chunk.js": "/static/js/2.2b258366.chunk.js",
-    "static/js/2.2b258366.chunk.js.map": "/static/js/2.2b258366.chunk.js.map",
-    "static/js/3.07851c2b.chunk.js": "/static/js/3.07851c2b.chunk.js",
-    "static/js/3.07851c2b.chunk.js.map": "/static/js/3.07851c2b.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.a1de875e.chunk.css.map": "/static/css/main.a1de875e.chunk.css.map",
-    "static/js/2.2b258366.chunk.js.LICENSE.txt": "/static/js/2.2b258366.chunk.js.LICENSE.txt",
-    "static/media/inter.css": "/static/media/Inter-Regular.8398b376.woff",
-    "static/media/green.32882df3.jpg": "/static/media/green.32882df3.jpg"
+    "main.css": "/mesto-with-authorization/static/css/main.a6390005.chunk.css",
+    "main.js": "/mesto-with-authorization/static/js/main.6589e21d.chunk.js",
+    "main.js.map": "/mesto-with-authorization/static/js/main.6589e21d.chunk.js.map",
+    "runtime-main.js": "/mesto-with-authorization/static/js/runtime-main.291aff1b.js",
+    "runtime-main.js.map": "/mesto-with-authorization/static/js/runtime-main.291aff1b.js.map",
+    "static/js/2.2b258366.chunk.js": "/mesto-with-authorization/static/js/2.2b258366.chunk.js",
+    "static/js/2.2b258366.chunk.js.map": "/mesto-with-authorization/static/js/2.2b258366.chunk.js.map",
+    "static/js/3.07851c2b.chunk.js": "/mesto-with-authorization/static/js/3.07851c2b.chunk.js",
+    "static/js/3.07851c2b.chunk.js.map": "/mesto-with-authorization/static/js/3.07851c2b.chunk.js.map",
+    "index.html": "/mesto-with-authorization/index.html",
+    "static/css/main.a6390005.chunk.css.map": "/mesto-with-authorization/static/css/main.a6390005.chunk.css.map",
+    "static/js/2.2b258366.chunk.js.LICENSE.txt": "/mesto-with-authorization/static/js/2.2b258366.chunk.js.LICENSE.txt",
+    "static/media/inter.css": "/mesto-with-authorization/static/media/Inter-Regular.8398b376.woff",
+    "static/media/green.32882df3.jpg": "/mesto-with-authorization/static/media/green.32882df3.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.96ad9801.js",
+    "static/js/runtime-main.291aff1b.js",
     "static/js/2.2b258366.chunk.js",
-    "static/css/main.a1de875e.chunk.css",
-    "static/js/main.5cd24bd1.chunk.js"
+    "static/css/main.a6390005.chunk.css",
+    "static/js/main.6589e21d.chunk.js"
   ]
 }
