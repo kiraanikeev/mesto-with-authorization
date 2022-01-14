@@ -63,7 +63,6 @@ function App() {
   const handelLogin = (email, password) => {
     login(password, email)
       .then((res) => {
-        console.log("ВЫ ЗАЛОГИНИЛИСЬ");
         setLoggedIn(true);
         setUserEmail(email);
         history.push("/");
@@ -242,7 +241,6 @@ function App() {
             <Login handelLogin={handelLogin} />
           </Route>
           <ProtectedRoute
-            exact
             path="/"
             component={Main}
             handleAvatarClick={handleAvatarClick}
@@ -254,7 +252,7 @@ function App() {
             handleCardLike={handleCardLike}
             loggedIn={loggedIn}
           />
-          <Redirect to="/" />
+          
           <Footer />
         </Switch>
       </CurrentUserContext.Provider>
